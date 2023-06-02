@@ -31,7 +31,7 @@ public class Controller<E extends EntityServices<E>, R extends JpaRepository<E, 
     //---------Root
     @GetMapping("/all")
     CollectionModel<EntityModel<E>> all() {
-        List<EntityModel<E>> modelList = repository.findAll().stream().map(entity -> toModel(entity, rootLink)).collect(Collectors.toList());
+        List<EntityModel<E>> modelList = repository.findAll().stream().map(entity -> assembler.toModel(entity, rootLink)).collect(Collectors.toList());
         return CollectionModel.of(modelList, linkTo(methodOn(Controller.class).all()).withSelfRel());
     }
     //---------Single

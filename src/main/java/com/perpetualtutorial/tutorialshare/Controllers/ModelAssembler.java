@@ -9,16 +9,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public //Spring annotation: auto create assembler when app start
-class ModelAssembler<M extends EntityServices<M>> implements RepresentationModelAssembler<M, EntityModel<M>> {
+class ModelAssembler<E extends EntityServices<E>> implements RepresentationModelAssembler<E, EntityModel<E>> {
     private String rootLink;
 
-    public EntityModel<M> toModel(M genericModel, String rootLink) {
+    public EntityModel<E> toModel(E genericModel, String rootLink) {
         this.rootLink = rootLink;
         return toModel(genericModel);
     }
 
     @Override
-    public EntityModel<M> toModel(M genericModel){
+    public EntityModel<E> toModel(E genericModel){
         //Return an EntityModel containing a self-link of recipe obj arg & root link
         return EntityModel.of(genericModel,
                 linkTo(methodOn(Controller.class).one(genericModel.getId())).withSelfRel(), //Self link
