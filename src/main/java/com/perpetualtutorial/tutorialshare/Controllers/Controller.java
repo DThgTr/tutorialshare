@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
-@RestController
-@RequestMapping("/api")
+//@RestController
+//@RequestMapping("/api")
 public class Controller<E extends EntityServices<E>, R extends JpaRepository<E, Long>> {
     private final R repository;
     private final ModelAssembler<E> assembler;
@@ -43,7 +43,7 @@ public class Controller<E extends EntityServices<E>, R extends JpaRepository<E, 
         return assembler.toModel(model, rootLink);
     }
     //--------------POST-------------
-    @PostMapping("/")
+    @PostMapping("")
     ResponseEntity<EntityModel<E>> newEntity(@RequestBody E newEntity) {
         EntityModel<E> entityModel = assembler.toModel(repository.save(newEntity), rootLink);
 
