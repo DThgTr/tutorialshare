@@ -26,6 +26,15 @@ public class Controller<E extends EntityServices<E>, R extends JpaRepository<E, 
         this.repository = repository;
         this.assembler = assembler;
     }
+
+    public R getRepository() {
+        return repository;
+    }
+
+    public A getAssembler() {
+        return assembler;
+    }
+
     //=======================CRUD=====================
     //--------------GET--------------
     //---------Root
