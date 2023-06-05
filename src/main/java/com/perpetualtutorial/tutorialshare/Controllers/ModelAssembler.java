@@ -1,9 +1,9 @@
+/*
 package com.perpetualtutorial.tutorialshare.Controllers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 import com.perpetualtutorial.tutorialshare.Models.EntityServices;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.stereotype.Component;
@@ -26,3 +26,4 @@ class ModelAssembler<E extends EntityServices<E>> implements RepresentationModel
                 linkTo(methodOn(Controller.class).all()).withRel(rootLink));                //Root link
     }
 }
+ */
