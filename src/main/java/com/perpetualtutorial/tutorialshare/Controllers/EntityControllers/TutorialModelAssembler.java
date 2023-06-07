@@ -1,4 +1,4 @@
-package com.perpetualtutorial.tutorialshare.Controllers.Controllers;
+package com.perpetualtutorial.tutorialshare.Controllers.EntityControllers;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
