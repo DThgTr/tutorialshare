@@ -11,7 +11,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "users")  //User = often reserved keyword => use @Table to specify table name
-public class User implements EntityServices<User> {
+public class User implements DataModelTemplate {
     private @Id @GeneratedValue Long id;
     private String username;
     private String password;
@@ -33,13 +33,6 @@ public class User implements EntityServices<User> {
     @Override
     public void setId(Long id) {
         this.id = id;
-    }
-
-    @Override
-    public void update(User updatedUser) {
-        setUsername(updatedUser.getUsername());
-        setPassword(updatedUser.getPassword());
-        setEmailAddress(updatedUser.getEmailAddress());
     }
 
     @Override

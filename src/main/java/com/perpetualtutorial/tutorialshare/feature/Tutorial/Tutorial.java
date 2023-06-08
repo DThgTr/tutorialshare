@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 import java.util.Objects;
 
 @Entity
-public class Tutorial implements EntityServices<Tutorial> {
+public class Tutorial implements DataModelTemplate {
     private @Id @GeneratedValue Long id;
     private String title;
     private String description;
@@ -33,14 +33,6 @@ public class Tutorial implements EntityServices<Tutorial> {
     @Override
     public void setId(Long id) {
         this.id = id;
-    }
-
-    @Override
-    public void update(Tutorial updatedTutorial) {
-        setTitle(updatedTutorial.getTitle());
-        setDescription(updatedTutorial.getDescription());
-        setContent(updatedTutorial.getContent());
-        setUserId(updatedTutorial.getUserId());
     }
 
     @Override
