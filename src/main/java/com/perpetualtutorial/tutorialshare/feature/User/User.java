@@ -1,5 +1,6 @@
 package com.perpetualtutorial.tutorialshare.feature.User;
 
+import com.perpetualtutorial.tutorialshare.template.DataModelTemplate;
 import com.perpetualtutorial.tutorialshare.template.EntityServices;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
