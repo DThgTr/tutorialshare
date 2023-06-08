@@ -1,9 +1,9 @@
 package com.perpetualtutorial.tutorialshare;
 
-import com.perpetualtutorial.tutorialshare.Models.Tutorial.Tutorial;
-import com.perpetualtutorial.tutorialshare.Models.User.User;
-import com.perpetualtutorial.tutorialshare.Repositories.TutorialRepository;
-import com.perpetualtutorial.tutorialshare.Repositories.UserRepository;
+import com.perpetualtutorial.tutorialshare.feature.Tutorial.Tutorial;
+import com.perpetualtutorial.tutorialshare.feature.Tutorial.TutorialRepository;
+import com.perpetualtutorial.tutorialshare.feature.User.User;
+import com.perpetualtutorial.tutorialshare.feature.User.UserRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
