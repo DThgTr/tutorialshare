@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 import java.util.Objects;
 
 @Entity
-@Table(name = "users")  //User = often reserved keyword => use @Table to specify table name
+@Table(name = "user")  //User = often reserved keyword => use @Table to specify table name
 public class User implements DataModelTemplate {
     private @Id @GeneratedValue Long id;
     private String username;

@@ -7,7 +7,6 @@ import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -30,6 +29,9 @@ public class Controller<S extends EntityServices<E, R>,
         this.assembler = assembler;
     }
 
+    public S getService() {
+        return service;
+    }
     public A getAssembler() {
         return assembler;
     }
