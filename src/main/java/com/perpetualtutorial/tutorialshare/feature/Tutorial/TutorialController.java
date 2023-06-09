@@ -15,14 +15,14 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @RestController
 @RequestMapping("api/tutorials")
-public class TutorialController extends Controller<Tutorial, TutorialRepository, TutorialModelAssembler> {
-    public TutorialController(TutorialRepository repository, TutorialModelAssembler assembler) {
-        super(repository, assembler);
+public class TutorialController extends Controller<TutorialService, Tutorial, TutorialRepository, TutorialModelAssembler> {
+    public TutorialController(TutorialService service, TutorialModelAssembler assembler) {
+        super(service, assembler);
     }
     @Override
     @GetMapping("/all")
     public CollectionModel<EntityModel<Tutorial>> all() {
-        List<EntityModel<Tutorial>> modelList = super.getRepository().findAll().stream().map(entity -> super.getAssembler().toModel(entity)).collect(Collectors.toList());
+        List<EntityModel<Tutorial>> modelList = super.getService().findAll().stream().map(entity -> super.getAssembler().toModel(entity)).collect(Collectors.toList());
         return CollectionModel.of(modelList, linkTo(methodOn(TutorialController.class).all()).withSelfRel());
     }
 }

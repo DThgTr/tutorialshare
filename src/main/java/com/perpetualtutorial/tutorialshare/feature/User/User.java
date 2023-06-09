@@ -6,11 +6,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
 @Entity
 @Table(name = "user")  //User = often reserved keyword => use @Table to specify table name
+@Component
 public class User implements DataModelTemplate {
     private @Id @GeneratedValue Long id;
     private String username;
