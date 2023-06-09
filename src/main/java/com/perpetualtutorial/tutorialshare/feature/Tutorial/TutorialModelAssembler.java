@@ -1,6 +1,5 @@
 package com.perpetualtutorial.tutorialshare.feature.Tutorial;
 
-import com.perpetualtutorial.tutorialshare.feature.Tutorial.TutorialController;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;

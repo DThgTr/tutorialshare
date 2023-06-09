@@ -1,12 +1,8 @@
 package com.perpetualtutorial.tutorialshare.feature.User;
 
 import com.perpetualtutorial.tutorialshare.template.Controller;
-import com.perpetualtutorial.tutorialshare.template.DataModelTemplate;
-import com.perpetualtutorial.tutorialshare.template.EntityServices;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
-import org.springframework.hateoas.server.RepresentationModelAssembler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
