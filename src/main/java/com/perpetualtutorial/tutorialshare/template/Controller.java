@@ -1,7 +1,5 @@
 package com.perpetualtutorial.tutorialshare.template;
 
-import com.perpetualtutorial.tutorialshare.utils.Exceptions.EntityNotFoundException;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -19,7 +17,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 //@RequestMapping("/api")
 public class Controller<S extends EntityServices<E, R>,
                         E extends DataModelTemplate,
-                        R extends JpaRepository<E, Long>,
+                        R extends RepositoryTemplate<E>,
                         A extends RepresentationModelAssembler<E, EntityModel<E>>> {
     private final A assembler;
     private final S service;

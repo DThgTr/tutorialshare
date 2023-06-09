@@ -1,17 +1,17 @@
 package com.perpetualtutorial.tutorialshare.template;
 
 import com.perpetualtutorial.tutorialshare.utils.Exceptions.EntityNotFoundException;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
+//@Service
+@Primary
 public class EntityServices<E extends DataModelTemplate, R extends JpaRepository<E, Long>> {
-    private final E entity;
     private final R repository;
-    public EntityServices(E entity, R repository) {
-        this.entity = entity;
+    public EntityServices(R repository) {
         this.repository = repository;
     }
     public List<E> findAll() {

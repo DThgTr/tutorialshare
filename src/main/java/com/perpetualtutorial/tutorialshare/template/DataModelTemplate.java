@@ -1,6 +1,9 @@
 package com.perpetualtutorial.tutorialshare.template;
 
-public interface DataModelTemplate {
+import org.springframework.stereotype.Component;
+
+@Component
+public interface DataModelTemplate{
     public Long getId();
     public void setId(Long id);
 }
