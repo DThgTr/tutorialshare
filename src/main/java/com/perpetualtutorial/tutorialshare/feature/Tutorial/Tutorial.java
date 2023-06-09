@@ -5,11 +5,13 @@ import com.perpetualtutorial.tutorialshare.template.EntityServices;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import org.springframework.stereotype.Component;
 
 import java.util.Objects;
 
 @Entity
+@Table(name="tutorials")
 @Component
 public class Tutorial implements DataModelTemplate {
     private @Id @GeneratedValue Long id;

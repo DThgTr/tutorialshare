@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.Objects;
 
 @Entity
-@Table(name = "user")  //User = often reserved keyword => use @Table to specify table name
+@Table(name = "users")  //User = often reserved keyword => use @Table to specify table name
 @Component
 public class User implements DataModelTemplate {
     private @Id @GeneratedValue Long id;
